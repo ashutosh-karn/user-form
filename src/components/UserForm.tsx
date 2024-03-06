@@ -65,7 +65,6 @@ const UserForm = () => {
       });
       data.dob = formattedDate;
     }
-    setValue("dob", data.dob);
 
     // Validate first name
     const firstNameError = validateName(data.firstName);

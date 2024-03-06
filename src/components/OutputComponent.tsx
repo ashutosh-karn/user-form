@@ -4,6 +4,20 @@ const OutputComponent = () => {
   const { getValues } = useFormContext();
   const formData = getValues();
 
+  const convertedDate = () => {
+    const dateParts = formData.dob.split("-");
+    const formattedDate = new Date(
+      parseInt(dateParts[0]),
+      parseInt(dateParts[1]) - 1,
+      parseInt(dateParts[2])
+    ).toLocaleDateString("en-IN", {
+      day: "2-digit",
+      month: "short",
+      year: "numeric",
+    });
+    return formattedDate;
+  };
+
   return (
     <div className="App output-component">
       <div className="form-container">
@@ -13,7 +27,7 @@ const OutputComponent = () => {
           <li>Mobile number:{formData?.mobileNumber}</li>
           <li>Email: {formData?.email}</li>
           <li>Gender: {formData?.gender}</li>
-          <li>Date of birth: {formData?.dob}</li>
+          <li>Date of birth: {convertedDate()}</li>
         </ul>
         <ul className="userDetails">
           <li>Tech stack: </li>
