@@ -24,7 +24,7 @@ const OutputComponent = () => {
         <ul className="userDetails">
           <li>First name: {formData?.firstName}</li>
           <li>Last name: {formData?.lastName}</li>
-          <li>Mobile number:{formData?.mobileNumber}</li>
+          <li>Mobile number: +91 {" "}{formData?.mobileNumber}</li>
           <li>Email: {formData?.email}</li>
           <li>Gender: {formData?.gender}</li>
           <li>Date of birth: {convertedDate()}</li>

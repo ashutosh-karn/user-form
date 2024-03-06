@@ -191,7 +191,7 @@ const UserForm = () => {
                 </FormControl>
                 <FormControl id="mobileNumber">
                   <FormLabel className="mobileNumber">
-                    Mobile Number (+91)
+                    Mobile Number 
                   </FormLabel>
                   <Controller
                     name="mobileNumber"
